@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007621;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+.nav-list li:last-child a {
+    border-bottom: none;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-panel {
+    background-color: white;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #760000;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ^^^ Mobilna ^^^ */
+/* vvv Desktop vvv */
+@media (min-width: 768px) {
+    .nav-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-list li a {
+        padding: 0 15px;
+        border-bottom: none;
+        border-right: 1px solid #760000;
+        line-height: 20px;
+    }
+
+    .nav-list li:last-child a {
+        border-right: none;
+    }
+
+    .content-container {
+        flex-direction: row;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1;
+        min-width: 25%;
+    }
+
+    .middle-panel {
+        flex: 2;
+        min-width: 50%;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
