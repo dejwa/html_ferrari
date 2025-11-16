@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-family: "Sofia", sans-serif;
 }
 
 header {
@@ -102,4 +103,5 @@ footer {
         width: 100%;
         height: auto;
     }
+
 }
